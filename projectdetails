@@ -11,6 +11,75 @@ same login page for all the users
 
 only one one admin is created 
 
+database
+ mysql> show tables;
++------------------------+
+|  Tables_in_busbooking  |
++------------------------+
+| 1)bookings             |
+| 2)bus                  |
+| 3)customer             |
+| 4)driver               |
+| 5)route                |
++------------------------+
+1)mysql> describe bookings;
++---------------+-------------+------+-----+---------+----------------+
+| Field         | Type        | Null | Key | Default | Extra          |
++---------------+-------------+------+-----+---------+----------------+
+| booking_id    | int(11)     | NO   | PRI | NULL    | auto_increment |
+| customer_id   | int(11)     | NO   | MUL | NULL    |                |
+| bus_id        | int(11)     | NO   | MUL | NULL    |                |
+| no_of_tickets | int(11)     | YES  |     | NULL    |                |
+| journey_date  | varchar(20) | YES  |     | NULL    |                |
++---------------+-------------+------+-----+---------+----------------+
+
+2)mysql> describe bus;
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| bus_id     | int(11)     | NO   | PRI | NULL    | auto_increment |
+| reg_no     | varchar(20) | YES  |     | NULL    |                |
+| bus_type   | varchar(20) | YES  |     | NULL    |                |
+| fare       | float       | YES  |     | NULL    |                |
+| total_seat | int(11)     | YES  |     | NULL    |                |
+| route_id   | int(11)     | NO   | MUL | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+
+3)mysql> describe customer;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| customer_id | int(11)     | NO   | PRI | NULL    | auto_increment |
+| name        | varchar(20) | YES  |     | NULL    |                |
+| gender      | varchar(20) | YES  |     | NULL    |                |
+| age         | int(11)     | YES  |     | NULL    |                |
+| username    | varchar(20) | YES  |     | NULL    |                |
+| pwd         | varchar(20) | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+
+4)mysql> describe driver;
++-----------+-------------+------+-----+---------+----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------+-------------+------+-----+---------+----------------+
+| driver_id | int(11)     | NO   | PRI | NULL    | auto_increment |
+| name      | varchar(20) | YES  |     | NULL    |                |
+| age       | int(11)     | YES  |     | NULL    |                |
+| gender    | varchar(20) | YES  |     | NULL    |                |
+| salary    | double      | YES  |     | NULL    |                |
+| username  | varchar(20) | YES  |     | NULL    |                |
+| pwd       | varchar(20) | YES  |     | NULL    |                |
+| bus_id    | int(11)     | NO   | MUL | NULL    |                |
++-----------+-------------+------+-----+---------+----------------+
+
+5)mysql> describe route;
++----------+-------------+------+-----+---------+----------------+
+| Field    | Type        | Null | Key | Default | Extra          |
++----------+-------------+------+-----+---------+----------------+
+| route_id | int(11)     | NO   | PRI | NULL    | auto_increment |
+| start    | varchar(20) | YES  |     | NULL    |                |
+| end      | varchar(20) | YES  |     | NULL    |                |
++----------+-------------+------+-----+---------+----------------+
+
 Functionalities of:-
 1.admin
 	1.delete customer
@@ -33,3 +102,6 @@ the code starts from mainpackage.mainfunction
 
 drawbacks 
  validation and presentations are not done yet
+ 
+
+
