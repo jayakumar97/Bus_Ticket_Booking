@@ -1,0 +1,35 @@
+BUS TICKET BOOKING
+
+The project is based on java
+
+Different types of user:-
+1.admin
+2.customer
+3.driver
+
+same login page for all the users 
+
+only one one admin is created 
+
+Functionalities of:-
+1.admin
+	1.delete customer
+	2.cancel booking
+	3.add driver
+	4.delete driver
+	5.add route
+	6.delete route
+	7.add bus
+	8.remove bus
+	9.exit
+2.customer
+	1.registration
+	2.book tickets
+	3.cancel booking
+3.driver
+	1.only can check his details
+		
+the code starts from mainpackage.mainfunction
+
+drawbacks 
+ validation and presentations are not done yet
