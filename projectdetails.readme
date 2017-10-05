@@ -11,7 +11,8 @@ same login page for all the users
 
 only one one admin is created 
 
-database
+database and table description:
+
  mysql> show tables;
 +------------------------+
 |  Tables_in_busbooking  |
